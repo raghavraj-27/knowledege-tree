@@ -35,6 +35,10 @@ app.get("/compose", function(req, res) {
   res.render("compose");
 });
 
+app.get("/sign-in", function(req, res) {
+  res.sendFile(__dirname + "/views/sign-in.html");
+})
+
 app.get("/posts/:user", function(req, res) {
   const reqestedTitle = req.params.user;
   const lowerCaseReqestedTitle = _.lowerCase(reqestedTitle); 
