@@ -35,8 +35,8 @@ app.get("/compose", function(req, res) {
   res.render("compose");
 });
 
-app.get("/text-editor", function(req, res) {
-  res.render("textEditor");
+app.get("/notes", function(req, res) {
+  res.render("notes");
 });
 
 app.get("/sign-in", function(req, res) {
