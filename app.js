@@ -35,6 +35,10 @@ app.get("/compose", function(req, res) {
   res.render("compose");
 });
 
+app.get("/text-editor", function(req, res) {
+  res.render("textEditor");
+});
+
 app.get("/sign-in", function(req, res) {
   res.sendFile(__dirname + "/views/sign-in.html");
 })
