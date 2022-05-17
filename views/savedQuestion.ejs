@@ -1,0 +1,36 @@
+<%- include("./partials/header") %>
+<br>
+<a href="/questions">
+    <button style="background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto">NEW QUESTION</button>
+</a>
+<br> 
+<br>
+
+<% if(questions.length > 0) { %>
+<h1 style="color: chocolate; margin: auto;">Here are the questions...</h1>
+
+    <% questions.forEach(function(questions) { %>
+        <br>
+            <a href="<%= questions.link %>"><h1><%= questions.title %></h1></a>
+            <a href="/questions/<%= questions.title %>"><button style="background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: auto">Open</button></a>
+        <br>
+    <% }); %>
+<% } else { %> 
+    <h1 style="color: chocolate; margin: auto;">No questions created...</h1>
+<% } %>

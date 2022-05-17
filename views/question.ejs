@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/question.css">
+    <title>Knowledge-Tree</title>
+</head>
+<body>
+    <%- include("partials/header") %>
+    <br><br>
+    <form class="" action="/saved-questions" method="post">
+        <div class="form-group">
+            <label>Question title</label>
+            <input type="text" class="form-control" name="questionTitle">
+            <label>Paste the link here</label>
+            <input type="text" class="form-control" name="questionLink">
+            <label>Algo or Code</label>
+            <textarea class="form-control" name="solution" id="" rows="10"></textarea>
+            <label>Bullets points about the question</label>
+            <textarea class="form-control" name="impPoints" id="" rows="10"></textarea>
+        </div>
+        <button type="submit">SAVE</button> <br><br>
+    </form>
+    <a href="/saved-questions">
+        <button>VIEW SAVED QUESTIONS</button>
+    </a>
+</body>
+</html>

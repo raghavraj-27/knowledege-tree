@@ -1,21 +1,51 @@
-<%- include("partials/header") %>
-
-<h1>Home</h1>
-<p><%= home_content %>></p>
-
-<% posts.forEach(function(posts) { %>
-        <h1><%= posts.title %></h1>
-        <!-- <p><%= posts.content %></p> -->
-        <% if(posts.content.length > 400) { %>
-                <p> 
-                        <%= posts.content.substring(0, 399) + "..." %> 
-                        <a href="/posts/<%= posts.title %>">Read more</a>
-                </p>
-        <% } else { %>
-                <p> <%= posts.content %> </p>
-        <% } %>
-<% }); %>
-
-<%- include("partials/footer") %>
-
-<%   %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <title>Knowledge-Tree</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: blueviolet;">Welcome to the Knowledge-Tree</h1>
+    <br><br>
+    <div style="margin: auto;">
+        <h2 style="color: darkcyan; text-align: center;">There is a famous saying by Marissa Mayer. “Geeks are people who love something so much that all the details matter”. Many have tried to define who these geeks are, but this one is right on spot! For a geek, all that is required to keep him busy and happy, is a group of other geeks working on the same problem trying to figure out some answer. How many times were you frustrated for not getting understood about a particular topic in DSA or choosing a proper path just after entering in college, collecting a set of questions for practice and making notes for future revision ? What did you expect and what did you get? This is where Knowledge-Tree comes into picture.</h2>
+    </div>
+    <br><br>
+    <div class="">
+        <div style="text-align: center;" style="display: flex; flex-direction: row;" class="container">
+            <div class="div1">
+                <img class="img" src="images/blog.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>BLOG</h2>
+                <h4>
+                    The blogs on several experiences in competitive programming, open source and other software developement related things. These blogs are the doubt clearing doubts.
+                    If you are interested in writing a blog, please go to <a href="/blogs/compose">here</a>;
+                </h4>
+                <a class="" href="/blogs"><button>View details</button></a>
+            </div>
+    
+            <div class="div2">
+                <img class="img" src="images/notes.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>NOTE</h2>
+                <h4>
+                    Anything you find important to yourself like you study notes, your main topics... Just put it here.
+                </h4>
+                <a class="" href="/saved-notes" role="button"><button>View details</button></a>
+            </div>
+    
+            <div class="div3">
+                <img class="img" src="images/question.jpg" alt="Generic placeholder image" width="140" height="140">
+                <h2>QUESTIONS</h2>
+                <h4>
+                    Are you not able to keep track of your solved problems ? Here you can paste up the links of your important question and note related to that.
+                </h4>    
+                <a class="" href="/saved-questions" role="button"><button>View details</button></a>
+            </div>
+        </div>
+    </div>
+    
+        
+</body>
+</html>

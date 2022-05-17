@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+<br>
+<a href="/blogs/compose">
+    <button style="background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto">WRITE A BLOG</button>
+</a>
+<br> 
+<br>
+
+
+<% if(posts.length > 0) { %>
+        <h1 style="color: chocolate; margin: auto;">Here are the blogs...</h1>
+
+        <% posts.forEach(function(posts) { %>
+                <h1><%= posts.title %></h1>
+                <!-- <p><%= posts.content %></p> -->
+                <% if(posts.content.length > 400) { %>
+                        <p> 
+                                <%= posts.content.substring(0, 399) + "..." %> 
+                                <a href="/blogs/posts/<%= posts.title %>">Read more</a>
+                        </p>
+                <% } else { %>
+                        <p> <%= posts.content %> </p>
+                <% } %>
+        <% }); %>
+<% } else { %>
+        <h1 style="color: chocolate; margin: auto;">No blogs created...</h1>
+<% } %>

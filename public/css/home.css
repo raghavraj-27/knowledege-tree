@@ -1,0 +1,24 @@
+.div1, .div2, .div3 {
+    size: 50%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.img {
+    border-radius: 50%;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto
+}

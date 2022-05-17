@@ -24,7 +24,7 @@
 <body>
     <section class="">
         <h1 class="shadow-sm">Write your notes</h1>
-        <div class="flex-box">
+        <div class="flex-box" >
             <div class="row">
                 <div class="col">
                     <!-- Adding different buttons for
@@ -65,21 +65,46 @@
         <div class="row">
             <div class="col-md-3 col-sm-3">
             </div>
-            <div class="col-md-6 col-sm-9">
-                <input type="text" placeholder="Your topic here" class="topic"/>
+            <form action="/saved-notes" method="post" class="col-md-6 col-sm-9">
+                <input type="text" placeholder="Your topic here" class="topic" name="notesTitle"/>
 
                 <div class="flex-box">
-                    <textarea id="textarea1" class="input shadow" name="name" rows="15" cols="100"
+                    <textarea id="textarea1" class="input shadow" name="notesContent" rows="15" cols="100"
                         placeholder="Your content here "></textarea>
                 </div>
-            </div>
+
+                <button type="submit" style="background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: auto">SAVE</button>
+            </form>
             <div class="col-md-3">
             </div>
+            <!-- <a href="/saved-notes" style="margin: auto;"> -->
+                
+            <!-- </a> -->
+            <a href="/view-notes" style="margin: auto;">
+                <button style="background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: auto">VIEW SAVED NOTES</button>
+            </a>
         </div>
     </section>
     <br>
+    
     <br>
-    <h6 style="text-align:center;">Knowledge Tree</h6>
+    
 
     <!--External JavaScript file-->
     <script src="js/home.js"></script>
